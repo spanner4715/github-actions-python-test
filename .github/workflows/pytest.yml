@@ -7,8 +7,8 @@ jobs:
   pytest:
     runs-on: ubuntu-latest
     steps:
-      - name: git clone
-        run : git clone https://github.com/spanner4715/github-actions-python-test
+      - name: checkout to my workspace
+        uses: actions/checkout@v3
       - name: install pytest
         run: pip install pytest
       - name: run pytest

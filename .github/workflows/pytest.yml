@@ -7,8 +7,16 @@ jobs:
   pytest:
     runs-on: ubuntu-latest
     steps:
+      - name: pre-checkout
+        run: |
+          pwd
+          ls -la
       - name: checkout to my workspace
         uses: actions/checkout@v3
+      - name: after-checkout
+        run: |
+          pwd
+          ls -la
       - name: install pytest
         run: pip install pytest
       - name: run pytest
